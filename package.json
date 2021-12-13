@@ -10,7 +10,10 @@
     "url": "https://github.com/caseyjhol"
   },
   "files": [
-    "dist/js/bootstrap-select.js"
+    "dist/js/bootstrap-select.js",
+    "dist/js/bootstrap-select.js.map",
+    "dist/js/bootstrap-select.min.js",
+    "dist/js/bootstrap-select.min.js.map"
   ],
   "contributors": [
     {

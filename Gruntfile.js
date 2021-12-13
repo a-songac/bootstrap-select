@@ -14,6 +14,10 @@ module.exports = function (grunt) {
     ' *\n' +
     ' * Copyright 2012-<%= grunt.template.today(\'yyyy\') %> SnapAppointments, LLC\n' +
     ' * Licensed under <%= pkg.license %> (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)\n' +
+    ' * ' +
+    ' * ************ FORKED MODIFICATIONS START **************' +
+    ' * Look for "FORKED MODIFICATION" to find the changes that were made in the fork ' +
+    ' * ************ FORKED MODIFICATIONS END **************' +
     ' */\n',
 
     // Task configuration.
