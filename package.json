@@ -9,6 +9,9 @@
     "name": "Casey Holzer",
     "url": "https://github.com/caseyjhol"
   },
+  "files": [
+    "dist/js/bootstrap-select.js"
+  ],
   "contributors": [
     {
       "name": "Silvio Moreto",
@@ -24,6 +27,10 @@
     "url": "git://github.com/snapappointments/bootstrap-select.git"
   },
   "license": "MIT",
+  "scripts": {
+    "build": "grunt",
+    "prepare": "npm run build"
+  },
   "dependencies": {},
   "peerDependencies": {
     "jquery": "1.9.1 - 3",
