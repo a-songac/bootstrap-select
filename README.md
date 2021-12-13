@@ -1,3 +1,33 @@
+<h1>Purpose of this Fork</h1>
+This fork is built to provide the minor changes required to our use of the bootstrap select plugin.
+
+## Changes Provided
+1. Add method to change the separator (in `js/bootstrap-select.js`)
+2. Use options text to populate dropdowns (in `js/bootstrap-select.js`)
+
+Changes in the code were noted with the block: `FORKED MODIFICATION`. Search for this in the modified files to spot the changes. 
+
+
+
+## How to use
+The `package.json` was slightly modified in order to use the `npm install` from the forked repo by:
+ 
+ * adding the `files` entry
+ * adding the `build` and `prepare` scripts.
+
+ With that we can install the forked repo with the command `npm install "https://github.com/a-songac/bootstrap-select.git#\<branch-name\>" --save`
+
+ Since a branch is being used, for updates to take place on the same branch, you need to manually delete the package from the node_modules and reinstall it.
+ 
+ References: https://stackoverflow.com/questions/40528053/npm-install-and-build-of-forked-github-repo/57829251#57829251 
+
+**********************************************************************************************
+
+<br>
+<br>
+<br>
+<br>
+
 <h1 align="center">bootstrap-select</h1>
 
 <p align="center">
