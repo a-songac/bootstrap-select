@@ -1,12 +1,3 @@
-/*
- * **************** NABU MODIFICATION START ****************
- *   1. Added a public method "separator" to allow to modify the multipleSeparator option dynamically
- *   2. Modified behavior when generating the text of the dropdown
- *
- * Look for "NABU MODIFICATION" in the file
- *
- * **************** NABU MODIFICATION END ****************
- */
 (function ($) {
   'use strict';
 
@@ -729,11 +720,11 @@
           iconElement;
 
       if (options.content) {
-        // ************ NABU MODIFICATION 2 START ******************
+        // ************ FORKED MODIFICATION 2 START ******************
         // Always use text in dropdown
         // textElement.innerHTML = options.optionContent;
         textElement.innerHTML = options.text;
-        // ************ NABU MODIFICATION 2 END ******************
+        // ************ FORKED MODIFICATION 2 END ******************
       } else {
         textElement.textContent = options.text;
 
@@ -3089,13 +3080,13 @@
 
       $(window).off(EVENT_KEY + '.' + this.selectId);
     },
-    // **************** NABU MODIFICATION 1 START ****************
+    // **************** FORKED MODIFICATION 1 START ****************
     changeSeparator: function (newSeparator) {
       // change element data instead of options because it has precedence when refreshing the module: see refresh function
       this.$element.data('multipleSeparator', newSeparator);
       this.refresh();
     }
-    // **************** NABU MODIFICATION 1 START ****************
+    // **************** FORKED MODIFICATION 1 START ****************
   };
 
   // SELECTPICKER PLUGIN DEFINITION
