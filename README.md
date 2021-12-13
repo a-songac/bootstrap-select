@@ -18,8 +18,17 @@ The `package.json` was slightly modified in order to use the `npm install` from 
  With that we can install the forked repo with the command `npm install "https://github.com/a-songac/bootstrap-select.git#\<branch-name\>" --save`
 
  Since a branch is being used, for updates to take place on the same branch, you need to manually delete the package from the node_modules and reinstall it.
+
  
  References: https://stackoverflow.com/questions/40528053/npm-install-and-build-of-forked-github-repo/57829251#57829251 
+
+ ## Approach for manaing versions:
+ For each new version of the plugin create a branch `<plugin version>-forked-<forked-version>`
+ 
+
+ ## How to update
+ https://stackoverflow.com/questions/7244321/how-do-i-update-or-sync-a-forked-repository-on-github
+
 
 **********************************************************************************************
 
