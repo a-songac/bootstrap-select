@@ -3090,9 +3090,9 @@
       $(window).off(EVENT_KEY + '.' + this.selectId);
     },
     // **************** NABU MODIFICATION 1 START ****************
-    changeSeparator: function(newSeparator) {
+    changeSeparator: function (newSeparator) {
       // change element data instead of options because it has precedence when refreshing the module: see refresh function
-      this.$element.data('multipleSeparator', newSeparator)
+      this.$element.data('multipleSeparator', newSeparator);
       this.refresh();
     }
     // **************** NABU MODIFICATION 1 START ****************
