@@ -720,11 +720,7 @@
           iconElement;
 
       if (options.content) {
-        // ************ FORKED MODIFICATION 2 START ******************
-        // Always use text in dropdown
-        // textElement.innerHTML = options.optionContent;
-        textElement.innerHTML = options.text;
-        // ************ FORKED MODIFICATION 2 END ******************
+        textElement.innerHTML = options.content;
       } else {
         textElement.textContent = options.text;
 
@@ -851,7 +847,10 @@
     this.remove = Selectpicker.prototype.remove;
     this.show = Selectpicker.prototype.show;
     this.hide = Selectpicker.prototype.hide;
+    // **************** FORKED MODIFICATION 1 START ****************
+    // add public method to change separator
     this.separator = Selectpicker.prototype.changeSeparator;
+    // **************** FORKED MODIFICATION 1 START ****************
 
     this.init();
   };
@@ -1634,15 +1633,19 @@
             break;
 
           case 'option':
+            // **************** FORKED MODIFICATION 2 START ****************
+            // create textOnlyItem to get rid of the html content before generating the text of the list item
+            var textOnlyItem = Object.assign({}, item, { content: null });
             liElement = generateOption.li(
               generateOption.a(
-                generateOption.text.call(that, item),
+                generateOption.text.call(that, textOnlyItem),
                 item.optionClass,
                 item.inlineStyle
               ),
               '',
               item.optID
             );
+            // **************** FORKED MODIFICATION 2 END ****************
 
             if (liElement.firstChild) {
               liElement.firstChild.id = that.selectId + '-' + item.index;
