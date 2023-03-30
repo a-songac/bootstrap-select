@@ -908,7 +908,10 @@
     display: false,
     sanitize: true,
     sanitizeFn: null,
-    whiteList: DefaultWhitelist
+    whiteList: DefaultWhitelist,
+    // **************** FORKED MODIFICATION 2 START ****************
+    optionText: false,
+    // **************** FORKED MODIFICATION 2 START ****************
   };
 
   Selectpicker.prototype = {
@@ -1634,11 +1637,11 @@
 
           case 'option':
             // **************** FORKED MODIFICATION 2 START ****************
-            // create textOnlyItem to get rid of the html content before generating the text of the list item
-            var textOnlyItem = Object.assign({}, item, { content: (item.text ? null : item.content) });
+            // when added option 'optionText' is true, make a textOnlyItem to get rid of the html content as the option display values
+            var modifiedItem = Object.assign({}, item, { content: (item.text && that.options.optionText ? null : item.content) });
             liElement = generateOption.li(
               generateOption.a(
-                generateOption.text.call(that, textOnlyItem),
+                generateOption.text.call(that, modifiedItem),
                 item.optionClass,
                 item.inlineStyle
               ),
