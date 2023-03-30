@@ -910,7 +910,7 @@
     sanitizeFn: null,
     whiteList: DefaultWhitelist,
     // **************** FORKED MODIFICATION 2 START ****************
-    optionText: false,
+    optionText: false
     // **************** FORKED MODIFICATION 2 START ****************
   };
 
@@ -1720,7 +1720,6 @@
         multipleSeparator.style.width = '10px';
       }
       // **************** FORKED MODIFICATION 3 END ****************
-
 
       button.classList.toggle('bs-placeholder', that.multiple ? !selectedCount : !getSelectValues(element, selectedOptions));
 
