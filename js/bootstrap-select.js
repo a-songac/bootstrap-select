@@ -1635,7 +1635,7 @@
           case 'option':
             // **************** FORKED MODIFICATION 2 START ****************
             // create textOnlyItem to get rid of the html content before generating the text of the list item
-            var textOnlyItem = Object.assign({}, item, { content: null });
+            var textOnlyItem = Object.assign({}, item, { content: (item.text ? null : item.content) });
             liElement = generateOption.li(
               generateOption.a(
                 generateOption.text.call(that, textOnlyItem),
