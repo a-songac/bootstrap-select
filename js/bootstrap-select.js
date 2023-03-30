@@ -1712,6 +1712,15 @@
           showCount,
           countMax,
           hasContent = false;
+      // **************** FORKED MODIFICATION 3 START ****************
+      // When multiple separator is a white space, create a dom element with width otherwise it is ignored
+      if (this.options.multipleSeparator.replace(/\s+/g, ' ') === ' ') {
+        multipleSeparator = document.createElement('span');
+        multipleSeparator.style.display = 'inline-block'
+        multipleSeparator.style.width = '10px';
+      }
+      // **************** FORKED MODIFICATION 3 END ****************
+
 
       button.classList.toggle('bs-placeholder', that.multiple ? !selectedCount : !getSelectValues(element, selectedOptions));
 
