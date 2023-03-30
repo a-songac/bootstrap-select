@@ -3,7 +3,8 @@ This fork is built to provide the minor changes required to our use of the boots
 
 ## Changes Provided
 1. Add method to change the separator (in `js/bootstrap-select.js`)
-2. Use options text to populate dropdowns (in `js/bootstrap-select.js`)
+2. Add option `optionText` to force using options text (instead of html) to populate the option display value. By default it is set to false (default plugin behavior) (in `js/bootstrap-select.js`)
+3. When an white space is provided as the `multipleSeparator`, replace the white line text node by an element with 10px width in order for the separator to be a gap. Otherwise, white line is ignored.
 
 Changes in the code were noted with the block: `FORKED MODIFICATION`. Search for this in the modified files to spot the changes. 
 
